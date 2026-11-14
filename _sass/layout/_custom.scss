@@ -671,6 +671,15 @@ a.btn-pill--link,
     font-size: 0.85rem;
   }
 
+  li.author__email {
+    white-space: normal;
+
+    a {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
   a {
     border-radius: 8px;
     color: var(--c-text);
