@@ -3,7 +3,7 @@
 en:
   about_me: "About Me"
   news: "News"
-  experience: "Research Experience"
+  experience: "Experience"
   education: "Education"
   skills: "Skills"
   publications: "Publications"
@@ -20,7 +20,7 @@ en:
 zh:
   about_me: "关于我"
   news: "最新动态"
-  experience: "研究经历"
+  experience: "经历"
   education: "教育经历"
   skills: "技能"
   publications: "发表论文"
