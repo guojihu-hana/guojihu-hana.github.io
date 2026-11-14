@@ -1,0 +1,22 @@
+---
+permalink: /
+lang: en
+translation: /zh/
+author_profile: true
+cards: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+{% capture intro %}
+Hi! I am **{{ site.author.name }}{% if site.author.name_zh %}（{{ site.author.name_zh }}）{% endif %}**, a Ph.D. student at [Fudan University](https://www.fudan.edu.cn/) (expected to graduate in 2028), advised by [Prof. Dahua Lin](https://scholar.google.com/citations?user=GMzzRRUAAAAJ&hl=en) and co-advised by [Wei Gao](https://gaow0007.github.io/).
+
+My research focuses on efficient training systems and machine learning systems (MLSys), including:
+
+- Pipeline and hybrid parallelism for large-scale LLM training
+- Resilient LLM training under failures
+- Agentic GPU kernel optimization
+{% endcapture %}
+
+{% include page-home.html intro=intro %}

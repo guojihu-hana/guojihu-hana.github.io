@@ -1,0 +1,43 @@
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>{{ t.education }}</h2>
+  <ul class="exp-list">
+    {% for e in site.data.education %}
+    {% if page.lang == "zh" %}
+      {% assign org = e.org_zh | default: e.org %}{% assign detail = e.detail_zh | default: e.detail %}{% assign period = e.period_zh | default: e.period %}
+    {% else %}
+      {% assign org = e.org %}{% assign detail = e.detail %}{% assign period = e.period %}
+    {% endif %}
+    <li class="exp-list__item">
+      <div>
+        <span class="exp-list__org">{{ org }}</span>
+        <span class="exp-list__team">{{ detail | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
+      </div>
+      <span class="exp-list__period">{{ period }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>{{ t.experience }}</h2>
+  {% include experience-list.html %}
+</section>
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-code" aria-hidden="true"></i>{{ t.skills }}</h2>
+  <ul class="skill-list">
+    {% for s in site.data.skills %}
+    <li><span class="skill-list__label">{% if page.lang == "zh" %}{{ s.label_zh | default: s.label }}{% else %}{{ s.label }}{% endif %}</span>{{ s.items }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="card">
+  <div class="card__header">
+    <h2 class="card__title"><i class="fa-solid fa-book-open" aria-hidden="true"></i>{{ t.publications }}</h2>
+    <span class="card__note"><sup>*</sup> {{ t.equal_contribution }}</span>
+  </div>
+  {% include publication-list.html %}
+</section>

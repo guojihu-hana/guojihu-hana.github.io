@@ -1,0 +1,14 @@
+{% include base_path %}
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
+<li class="pub">
+  <div class="pub__head">
+    <a class="pub__title" href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
+    <span class="pub__buttons">
+      {% if post.ccf %}<span class="btn-pill btn-pill--ccf-{{ post.ccf | downcase }}">CCF-{{ post.ccf }}</span>{% endif %}
+      {% if post.paperurl %}<a class="btn-pill btn-pill--link" href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>{{ t.paper }}</a>{% endif %}
+      {% if post.codeurl %}<a class="btn-pill btn-pill--link" href="{{ post.codeurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>{{ t.code }}</a>{% endif %}
+    </span>
+  </div>
+  <div class="pub__authors">{{ post.authors | default: post.citation }}</div>
+  {% if post.venue_short %}<div class="pub__venue">{{ post.venue_short }}</div>{% endif %}
+</li>

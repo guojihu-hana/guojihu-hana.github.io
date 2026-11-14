@@ -1,0 +1,7 @@
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
+
+<p class="page__intro">
+  {% if site.author.googlescholar %}{{ t.scholar_before }}<a href="{{ site.author.googlescholar }}">{{ t.scholar_link }}</a>{{ t.scholar_after }} {% endif %}<sup>*</sup> {{ t.equal_contribution }}
+</p>
+
+{% include publication-list.html cards=true %}

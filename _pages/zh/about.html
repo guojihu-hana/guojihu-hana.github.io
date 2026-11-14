@@ -1,0 +1,19 @@
+---
+permalink: /zh/
+lang: zh
+translation: /
+author_profile: true
+cards: true
+---
+
+{% capture intro %}
+你好！我是 **{{ site.author.name_zh | default: site.author.name }}**，[复旦大学](https://www.fudan.edu.cn/)博士生，预计 2028 年毕业。导师为[林达华教授](https://scholar.google.com/citations?user=GMzzRRUAAAAJ&hl=en)，共同指导老师为[高威](https://gaow0007.github.io/)。
+
+我的研究方向是高效训练系统与机器学习系统（MLSys），主要包括：
+
+- 大模型训练中的流水线并行与混合并行
+- 面向故障的大模型弹性训练
+- 基于智能体的 GPU Kernel 优化
+{% endcapture %}
+
+{% include page-home.html intro=intro %}

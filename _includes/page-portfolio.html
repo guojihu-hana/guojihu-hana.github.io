@@ -1,0 +1,16 @@
+{% include base_path %}
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
+
+<div class="project-grid">
+  {% for post in site.portfolio reversed %}
+  {% if page.lang == "zh" %}{% assign desc = post.excerpt_zh | default: post.excerpt %}{% else %}{% assign desc = post.excerpt %}{% endif %}
+  <article class="card project-card">
+    <h2 class="project-card__title"><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h2>
+    <p class="project-card__desc">{{ desc | markdownify | strip_html | strip }}</p>
+    <div class="project-card__buttons">
+      {% if post.paperurl %}<a class="btn-pill btn-pill--link" href="{{ post.paperurl }}" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>{{ t.paper }}</a>{% endif %}
+      {% if post.codeurl %}<a class="btn-pill btn-pill--link" href="{{ post.codeurl }}" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>{{ t.code }}</a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

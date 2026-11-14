@@ -1,0 +1,8 @@
+# Education shown on the CV, newest first. `detail` / `detail_zh` support Markdown.
+
+- period: Sep 2024 – 2028 (expected)
+  period_zh: 2024.09 – 2028（预计）
+  org: Fudan University
+  org_zh: 复旦大学
+  detail: "Ph.D. student · Advisor: [Prof. Dahua Lin](https://scholar.google.com/citations?user=GMzzRRUAAAAJ&hl=en) · Co-advisor: [Wei Gao](https://gaow0007.github.io/)"
+  detail_zh: "博士研究生 · 导师：[林达华教授](https://scholar.google.com/citations?user=GMzzRRUAAAAJ&hl=en) · 共同指导：[高威](https://gaow0007.github.io/)"

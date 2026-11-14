@@ -1,0 +1,9 @@
+# Skills shown on the CV.
+
+- label: Programming
+  label_zh: 编程语言
+  items: C/C++, CUDA, Python
+
+- label: ML systems
+  label_zh: 机器学习系统
+  items: PyTorch, Megatron-LM, vLLM

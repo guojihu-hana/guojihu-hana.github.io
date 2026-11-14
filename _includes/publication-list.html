@@ -1,0 +1,20 @@
+{% comment %}
+  Publications grouped by `site.publication_category`, newest first.
+  Pass `cards=true` to render each group as its own card.
+{% endcomment %}
+{% for category in site.publication_category %}
+  {% assign pubs = site.publications | where: "category", category[0] | reverse %}
+  {% if pubs.size > 0 %}
+    {% if page.lang == "zh" %}{% assign group_title = category[1].title_zh | default: category[1].title %}{% else %}{% assign group_title = category[1].title %}{% endif %}
+    {% if include.cards %}
+      <section class="card">
+        <h2 class="card__title">{{ group_title }}</h2>
+    {% else %}
+      <h3 class="pub-group">{{ group_title }}</h3>
+    {% endif %}
+    <ul class="pub-list">
+      {% for post in pubs %}{% include publication-item.html %}{% endfor %}
+    </ul>
+    {% if include.cards %}</section>{% endif %}
+  {% endif %}
+{% endfor %}

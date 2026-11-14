@@ -1,0 +1,37 @@
+{% comment %} Homepage cards; the intro Markdown is passed in by the language-specific page. {% endcomment %}
+{% assign t = site.data.ui[page.lang] | default: site.data.ui.en %}
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-user" aria-hidden="true"></i>{{ t.about_me }}</h2>
+  <div class="card__prose">{{ include.intro | markdownify }}</div>
+</section>
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i>{{ t.news }}</h2>
+  <ul class="news-list">
+    {% for item in site.data.news %}
+    {% if page.lang == "zh" %}
+      {% assign news_date = item.date_zh | default: item.date %}{% assign news_text = item.text_zh | default: item.text %}
+    {% else %}
+      {% assign news_date = item.date %}{% assign news_text = item.text %}
+    {% endif %}
+    <li>
+      <span class="news-list__date">{{ news_date }}</span>
+      <span class="news-list__text">{{ news_text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="card">
+  <h2 class="card__title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>{{ t.experience }}</h2>
+  {% include experience-list.html %}
+</section>
+
+<section class="card">
+  <div class="card__header">
+    <h2 class="card__title"><i class="fa-solid fa-book-open" aria-hidden="true"></i>{{ t.publications }}</h2>
+    <span class="card__note"><sup>*</sup> {{ t.equal_contribution }}</span>
+  </div>
+  {% include publication-list.html %}
+</section>

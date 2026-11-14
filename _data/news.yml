@@ -1,0 +1,26 @@
+# Homepage news, newest first. `text` / `text_zh` support Markdown.
+
+- date: Oct 2026
+  date_zh: "2026.10"
+  text: "*SpecGen* was accepted to [PPoPP 2027](https://arxiv.org/abs/2606.17518)."
+  text_zh: "*SpecGen* 被 [PPoPP 2027](https://arxiv.org/abs/2606.17518) 录用。"
+
+- date: Aug 2026
+  date_zh: "2026.08"
+  text: "Joined the Kling Pre-training Infra team (kstar) at Kuaishou."
+  text_zh: "加入快手可灵预训练 Infra 组（kstar）。"
+
+- date: Jul 2026
+  date_zh: "2026.07"
+  text: "*OctoPipe* was accepted to [SC 2026](https://arxiv.org/abs/2509.23722)."
+  text_zh: "*OctoPipe* 被 [SC 2026](https://arxiv.org/abs/2509.23722) 录用。"
+
+- date: Apr 2026
+  date_zh: "2026.04"
+  text: "*ResiHP* was accepted to [HPDC 2026](https://doi.org/10.1145/3806645.3807815)."
+  text_zh: "*ResiHP* 被 [HPDC 2026](https://doi.org/10.1145/3806645.3807815) 录用。"
+
+- date: Jun 2024
+  date_zh: "2024.06"
+  text: "*CAMLB-SpMV* was accepted to [ICPP 2024](https://doi.org/10.1145/3673038.3673042)."
+  text_zh: "*CAMLB-SpMV* 被 [ICPP 2024](https://doi.org/10.1145/3673038.3673042) 录用。"

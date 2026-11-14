@@ -1,0 +1,16 @@
+<ul class="exp-list">
+  {% for e in site.data.experience %}
+  {% if page.lang == "zh" %}
+    {% assign org = e.org_zh | default: e.org %}{% assign team = e.team_zh | default: e.team %}{% assign period = e.period_zh | default: e.period %}
+  {% else %}
+    {% assign org = e.org %}{% assign team = e.team %}{% assign period = e.period %}
+  {% endif %}
+  <li class="exp-list__item">
+    <div>
+      <span class="exp-list__org">{{ org }}</span>
+      <span class="exp-list__team">{{ team }}</span>
+    </div>
+    <span class="exp-list__period">{{ period }}</span>
+  </li>
+  {% endfor %}
+</ul>
