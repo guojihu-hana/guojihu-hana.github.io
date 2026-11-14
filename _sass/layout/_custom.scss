@@ -511,6 +511,13 @@ a.pub__title,
   }
 }
 
+.pub__authors b,
+.citation b {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
 .pub__venue {
   margin-top: 0.2rem;
   color: var(--c-text);
