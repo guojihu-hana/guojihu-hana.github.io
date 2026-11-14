@@ -26,12 +26,12 @@ author:
   avatar           : "profile.jpg"
   name             : "Jihu Guo"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. student working on efficient training systems and MLSys"
+  bio              : "Ph.D. student working on efficient MLSys"
   location         : "Shanghai, China"
   employer         : "Fudan University"
   # Chinese version of the sidebar; an empty field falls back to the English one
   name_zh          : "郭际虎"
-  bio_zh           : "复旦大学博士生，研究高效训练系统与 MLSys"
+  bio_zh           : "复旦大学博士生，研究高效机器学习系统"
   location_zh      : "中国上海"
   employer_zh      : "复旦大学"
   uri              : # URL
